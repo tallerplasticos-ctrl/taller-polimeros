@@ -414,7 +414,7 @@ footer .wrap{padding-block:26px;font-size:14px;display:flex;flex-wrap:wrap;gap:1
 </main>
 
 <footer>
-  <div class="wrap"><span>Taller de Polímeros · Universidad ECCI</span><span>Fuente: fichas técnicas FR-GME-056 del taller · octubre 2026</span></div>
+  <div class="wrap"><span>Elaborado por <b>Daniela Fernández Ortega</b></span><span>Taller de Polímeros</span></div>
 </footer>
 
 <script>
@@ -439,7 +439,7 @@ const lista=document.getElementById('lista');
 const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
 const chips=(a,cls)=>a.map(x=>`<span class="chip ${cls}">${esc(x)}</span>`).join('');
 lista.innerHTML=E.map(e=>`<article class="ficha" data-c="${e.c}">
- <div class="foto"><img src="img/${e.i}.jpg" alt="${e.n} del Taller de Polímeros" loading="lazy"><span class="cat" data-c="${e.c}">${e.c}</span></div>
+ <div class="foto"><img src="img/${e.i}.jpg" style="object-position:${e.i==='peletizadora'?'center 62%':'center'}" alt="${e.n} del Taller de Polímeros" loading="lazy"><span class="cat" data-c="${e.c}">${e.c}</span></div>
  <div class="ficha-head"><h3>${e.n}</h3><span class="modelo">${esc(e.m)}</span></div>
  <div class="ficha-body">
   <p class="desc">${esc(e.d)}</p>
